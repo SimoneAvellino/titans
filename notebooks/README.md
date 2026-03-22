@@ -1,3 +1,4 @@
-# Notebooks
+# Jupyter Notebooks
 
-In questa cartella si inseriscono i notebook Jupyter (`.ipynb`). Servono per l'esplorazione interattiva iniziale dei dati (Data Analysis) e debug rapido. **Nota Bene:** i notebook non devono mai sostituire gli script di training ed evaluation principali all'interno di `src/`.
+Use this folder only for initial data exploration, quick visualizations, and proof of concepts. 
+Actual training code must reside in the Python files inside `src/`.

@@ -1,6 +1,6 @@
-# Documentazione e Presentazione
+# Documentation and Presentation
 
-Cartella dedicata al materiale descrittivo di valutazione non basato su codice.
-Salvate in questa cartella:
-- **Report finale** in formato Markdown (`REPORT.md`).
-- **Slide di presentazione finale d'esame** (in PDF / PPTX).
+Folder dedicated to the descriptive, non-code-based evaluation material.
+Save in this folder:
+- **Final Report** in Markdown format (`REPORT.md`).
+- **Final exam presentation slides** (in PDF / PPTX).

@@ -1,58 +1,58 @@
-# Struttura e Best Practices della Repository
+# Repository Structure and Best Practices
 
-Questo documento serve da guida per mantenere il vostro progetto in ordine. Una repository ben strutturata non solo facilita il lavoro in team, ma è anche il biglietto da visita del vostro progetto in ambito accademico e lavorativo.
+This document serves as a guide for keeping your project organized. A well-structured repository not only facilitates teamwork but also acts as the calling card for your project in academic and professional contexts.
 
 ---
 
-## 📁 1. Organizzazione delle Directory
+## 📁 1. Directory Organization
 
-Nel fork che avete clonato, trovate già una struttura preimpostata. Ecco come utilizzarla correttamente:
+In the fork you have cloned, you will find a pre-configured structure. Here is how to use it correctly:
 
-* **`README.md`**: File per la documentazione tecnica del repository. Sostituite i placeholder nel file `README.md` con le informazioni tecniche sul repository.
-* **`data/`**: Conservate qui i dataset. Ricordate che **questi file NON devono mai essere caricati su GitHub**. Il file `.gitignore` è già configurato per escludere file contenuti in questa cartella, ma prestate sempre attenzione.
-* **`src/`**: Il cuore del vostro codice. Oltre alle cartelle già incluse, potete aggiungere quelle che ritenete necessarie per il vostro progetto.
-  * `datasets/`: Script per lo scaricamento, il parsing e i dataloader in PyTorch.
-  * `models/`: Architetture delle reti neurali (es. definizioni delle classi `nn.Module`).
-  * `training/`: Training loop, custom loss functions, optimizers.
-  * `evaluation/`: Codice per test, inferenza e calcolo metriche.
-  * `utils/`: Funzioni ausiliarie, logger, visualizzazioni.
-* **`notebooks/`**: Notebook Jupyter. Da utilizzare *soltanto* per l'esplorazione iniziale dei dati, visualizzazioni rapide e proof of concept. Il codice di training vero e proprio deve risiedere nei file Python dentro `src/`.
+* **`README.md`**: File for the technical documentation of the repository. Replace the placeholders in the `README.md` file with the technical information about the repository.
+* **`data/`**: Store your datasets here. Remember that **these files should NEVER be uploaded to GitHub**. The `.gitignore` file is already configured to exclude files contained in this folder, but always pay attention.
+* **`src/`**: The heart of your code. In addition to the folders already included, you can add any others you deem necessary for your project.
+  * `datasets/`: Scripts for downloading, parsing, and PyTorch dataloaders.
+  * `models/`: Neural network architectures (e.g., definitions of `nn.Module` classes).
+  * `training/`: Training loops, custom loss functions, optimizers.
+  * `evaluation/`: Code for testing, inference, and metric calculation.
+  * `utils/`: Auxiliary functions, loggers, visualizations.
+* **`notebooks/`**: Jupyter Notebooks. To be used *only* for initial data exploration, quick visualizations, and proof of concepts. The actual training code must reside in the Python files inside `src/`.
 * **`experiments/`**:
-  * `configs/`: File `.yaml` o `.json` per gestire i parametri degli esperimenti (hyperparameters, path).
-  * `logs/`: Output di TensorBoard, Weights & Biases o semplici log file. *(Non committabili)*.
-* **`figures/`**: Grafici, test plot e immagini inserite nel README o nella presentazione.
-* **`docs/`**: File per la documentazione dettagliata, slide della presentazione finale, e report finale (`docs/REPORT.md`).
+  * `configs/`: `.yaml` or `.json` files to manage experiment parameters (hyperparameters, paths).
+  * `logs/`: TensorBoard outputs, Weights & Biases, or simple log files. *(Do not commit)*.
+* **`figures/`**: Graphs, test plots, and images used in the README or presentation.
+* **`docs/`**: Files for detailed documentation, final presentation slides, and the final report (`docs/REPORT.md`).
 
 ---
 
-## 💻 2. Standard del Codice (Clean Code)
+## 💻 2. Code Standards (Clean Code)
 
-Avere codice leggibile è essenziale, specie nei progetti di Machine/Deep Learning dove implementazioni confusionarie mascherano facilmente bug logici.
+Having readable code is essential, especially in Machine/Deep Learning projects where messy implementations can easily mask logical bugs.
 
-* **Nomi Sensati**: Usate nomi chiari e parlanti (es. `compute_cross_entropy` invece di `calc_ce`).
-* **Modularità**: Evitate file "mostro" da 2000 righe. Ogni file dovrebbe occuparsi di una cosa sola. Ad esempio, il loop di addestramento non deve contenere anche l'architettura della rete neurale o le trasformazioni sui tensori.
-* **Docstrings e Commenti**: 
-  * Documentate le classi e le funzioni principali con Docstrings brevi ma esaustivi.
-  * Limitate i commenti "in-linea" per lo più ai blocchi controintuitivi / complessi (es. operazioni complicate tra tensori dimensionali che modificano lo shape).
-* **Type Hinting**: L'inserimento dei classici `int`, `str`, `List`, ecc. è raccomandato, rende l'intento del codice immediatamente chiaro a chi lo revisiona.
-
----
-
-## 📦 3. Gestione delle Dipendenze
-
-La riproducibilità è un caposaldo fondamentale della progettazione di sistemi di Deep Learning. Un'altra persona deve poter ricreare il vostro ambiente in un attimo.
-* Mantenete il file `environment.yml` **sempre aggiornato**.
-* Se scaricate un nuovo pacchetto vitale via pip o conda, abbiate l'accortezza di annotarlo nel file (con i numeri di versione quando opportuno).
-* Evitate di includere librerie OS-specific o non strettamente richieste per il progetto nel file environment.
+* **Meaningful Names**: Use clear and descriptive names (e.g., `compute_cross_entropy` instead of `calc_ce`).
+* **Modularity**: Avoid "monster" files with 2000 lines. Each file should have a single responsibility. For example, the training loop should not also contain the neural network architecture or tensor transformations.
+* **Docstrings and Comments**: 
+  * Document the main classes and functions with short but comprehensive Docstrings.
+  * Limit "in-line" comments mostly to counter-intuitive / complex blocks (e.g., complicated operations between dimensional tensors that modify the shape).
+* **Type Hinting**: The inclusion of classic types like `int`, `str`, `List`, etc., is highly recommended, as it makes the code's intent immediately clear to reviewers.
 
 ---
 
-## 🌳 4. Flusso di Lavoro ed Uso di Git
+## 📦 3. Dependency Management
 
-Per i gruppi formati da più di una persona, vi sconsigliamo di committare i vostri progressi unicamente sul branch `main`.
-* **Uso dei Branch**: Lavorate per funzionalità. Volete testare una ResNet50? Create un branch `feature/resnet50`. Quando l'implementazione è solida, eseguite in Github una "Pull Request" e unitelo (merge) a `main`.
-* **Messaggi di Commit**: Evitate commit stile "aggiornamento" o "fix bug". Cercate di dare informazione: `Add custom triplet loss in training loop` o `Fix dataloader out of bounds exception`.
+Reproducibility is a fundamental cornerstone of Deep Learning system design. Another person must be able to recreate your environment in an instant.
+* Keep the `environment.yml` file **always updated**.
+* If you download a new crucial package via pip or conda, make sure to note it in the file (with version numbers when appropriate).
+* Avoid including OS-specific libraries or those not strictly required for the project in the environment file.
 
 ---
 
-Seguendo queste linee guida, svilupperete l'abitudine verso gli standard comunemente impiegati nell'industria e nella ricerca software!
+## 🌳 4. Workflow and Git Usage
+
+For groups consisting of more than one person, we strongly advise against committing your progress solely to the `main` branch.
+* **Branch Usage**: Work by features. Want to test a ResNet50? Create a `feature/resnet50` branch. When the implementation is solid, open a "Pull Request" on GitHub and merge it into `main`.
+* **Commit Messages**: Avoid commits like "update" or "fix bug". Try to provide information: `Add custom triplet loss in training loop` or `Fix dataloader out of bounds exception`.
+
+---
+
+By following these guidelines, you will develop habits aligned with the standards commonly used in the software industry and research!

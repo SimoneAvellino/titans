@@ -1,5 +1,3 @@
-# Dati
+# Data Folder
 
-In questa cartella andranno posizionati i dataset (sia grezzi che pre-processati).
-**ATTENZIONE**: Non committate file di grandi dimensioni su GitHub (es. immagini, video, HDF5).
-Potete opzionalmente inserire piccoli sample (es. `samples/`), script di download, o dummy data per testare rapidamente la pipeline pipeline.
+Place your datasets here. Remember that these files (especially large ones) should not be uploaded to GitHub. The `.gitignore` is set to ignore contents within this directory.

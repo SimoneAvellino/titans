@@ -1,51 +1,51 @@
-> **NOTA:** Questo è il template per la vostra relazione. Cancellate questo blocco nota prima della consegna.
+> **NOTE:** This is the template for your report. Delete this note block before submission.
 
-# [Titolo del Progetto]
-- **Group ID**: [Es. G07]
-- **ID Progetto**: [Es. 1]
+# [Project Title]
+- **Group ID**: [E.g., G07]
+- **Project ID**: [E.g., 1]
 
 ---
 
-## 1. Introduzione e Obiettivo
-*Descrivete qual è l'obiettivo del progetto, perché è rilevante e quale problema specifico state cercando di risolvere. Qual è il vostro obiettivo principale o la vostra ipotesi di partenza?*
+## 1. Introduction and Objective
+*Describe the objective of the project, why it is relevant, and what specific problem you are trying to solve. What is your main goal or initial hypothesis?*
 
-## 2. Contributo e Valore Aggiunto
-*Riassumete in maniera sintetica cosa è stato fatto. ("Abbiamo costruito un modello basato su X per il task Y"). Mettete in luce il vostro valore aggiunto rispetto a una banale esecuzione di codice esistente (es. nuova loss, diversa architettura, data augmentation specifica, ecc.).*
+## 2. Contribution and Added Value
+*Summarize what was done concisely. ("We built a model based on X for task Y"). Highlight your added value compared to merely running existing code (e.g., new loss, different architecture, specific data augmentation, etc.).*
 
-## 3. Dati Utilizzati
-Descrivete formalmente i dati usati:
-- Da dove provengono?
-- Quali sono le statistiche principali (numero di sample, split train/test)?
-- Che tipo di preprocessing o augmentation avete applicato per prepararli all'addestramento?*
+## 3. Data Used
+Describe formally the used data:
+- Where do they come from?
+- What are the main statistics (number of samples, train/test split)?
+- What kind of preprocessing or augmentation did you apply to prepare them for training?*
 
-## 4. Metodologia e Architettura
-*Dettagliate gli esperimenti e come è fatto il vostro sistema. Quale architettura avete usato come baseline? Come l'avete modificata? Descrivete la topologia della rete, i layer chiave, la loss function utilizzata e la logica di training.*
+## 4. Methodology and Architecture
+*Detail the experiments and how your system is built. What architecture did you use as a baseline? How did you modify it? Describe the network topology, key layers, the loss function used, and the training logic.*
 
-## 5. Risultati e Discussione
-Inserite qui le tabelle quantitative con i risultati ottenuti e confrontate la vostra soluzione con la baseline. **Non limitatevi a incollare i numeri**, ma commentateli:
-- Perché il modello A performa meglio del modello B?
-- Ci sono classi in cui il modello è particolarmente debole?
-- Mostrate esempi qualitativi (es. inserendo immagini predette bene vs predette male).*
+## 5. Results and Discussion
+Insert here the quantitative tables with the achieved results and compare your solution with the baseline. **Do not limit yourself to pasting numbers**, but comment on them:
+- Why does model A perform better than model B?
+- Are there classes where the model is particularly weak?
+- Show qualitative examples (e.g., inserting correctly vs. incorrectly predicted images).*
 
-Esempio:
+Example:
 
-**Tabella 1**: Risultati quantitativi
+**Table 1**: Quantitative results
 
-| Modello | Metrica 1 | Metrica 2 |
+| Model | Metric 1 | Metric 2 |
 | :--- | :---: | :---: |
 | Baseline | 65.4% | 45.1 |
-| Nostro Modello Finale | 72.1% | 50.4 |
+| Our Final Model | 72.1% | 50.4 |
 
-## 6. Conclusione e Limitazioni
-*Riassumete l'esito del progetto. Quali sono gli attuali limiti (es. richiede troppa memoria, fallisce in condizioni di luce scarsa)? Se aveste altro tempo, quali futuri esperimenti fareste?*
+## 6. Conclusion and Limitations
+*Summarize the project's outcome. What are the current limitations (e.g., requires too much memory, fails in low-light conditions)? If you had more time, what future experiments would you run?*
 
-## 7. Informazioni Aggiuntive
+## 7. Additional Information
 
-### 7.1 Suddivisione dei Contributi
-*Dettagliate chiaramente chi ha fatto cosa all'interno del gruppo.*
-- **Persona 1**: ...
-- **Persona 2**: ...
-- **Persona 3**: ...
+### 7.1 Contribution Breakdown
+*Detail clearly who did what within the group.*
+- **Person 1**: ...
+- **Person 2**: ...
+- **Person 3**: ...
 
-### 7.2 L'uso di Intelligenza Artificiale
-*Dichiarate qui l'eventuale uso di strumenti come Copilot o ChatGPT, esplicitando in quali fasi vi hanno aiutato (es. scrittura boilerplate, debugging, documentazione), fermo restando che il design architetturale e la responsabilità del risultato è vostra.*
+### 7.2 Use of Artificial Intelligence
+*Declare here the possible use of tools like Copilot or ChatGPT, specifying in which phases they helped you (e.g., writing boilerplate, debugging, documentation), keeping in mind that the architectural design and the responsibility for the result are yours.*
